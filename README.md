@@ -25,6 +25,7 @@ The badges used here are explained below:
 ![Demo Preview](https://media.licdn.com/dms/image/v2/C5622AQFc-2Jd0j4_Lg/feedshare-shrink_1280/feedshare-shrink_1280/0/1659317977190?e=1734566400&v=beta&t=fTE877ROK6D22yP0byM04IuynUq4Dx5eMYak6rBXIgs)
 
 The web that shows the weather report .
+ https://varadscript.github.io/weather-web/
 
 # Table of Contents
 
