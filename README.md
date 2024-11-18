@@ -3,9 +3,7 @@
 
 # Weather Web
 
-[![GitHub last commit](https://img.shields.io/github/last-commit/navendu-pottekkat/awesome-readme)](https://img.shields.io/github/last-commit/navendu-pottekkat/awesome-readme)
-[![GitHub issues](https://img.shields.io/github/issues-raw/navendu-pottekkat/awesome-readme)](https://img.shields.io/github/issues-raw/navendu-pottekkat/awesome-readme)
-[![GitHub pull requests](https://img.shields.io/github/issues-pr/navendu-pottekkat/awesome-readme)](https://img.shields.io/github/issues-pr/navendu-pottekkat/awesome-readme)
+
 [![GitHub](https://img.shields.io/github/license/navendu-pottekkat/awesome-readme)](https://img.shields.io/github/license/navendu-pottekkat/awesome-readme)
 
 
@@ -20,13 +18,7 @@ The badges used here are explained below:
 
 ![GitHub release (latest by date including pre-releases)](https://img.shields.io/github/v/release/navendu-pottekkat/awesome-readme?include_prereleases)
 
-![GitHub last commit](https://img.shields.io/github/last-commit/navendu-pottekkat/awesome-readme)
 
-![GitHub issues](https://img.shields.io/github/issues-raw/navendu-pottekkat/awesome-readme)
-
-![GitHub pull requests](https://img.shields.io/github/issues-pr/navendu-pottekkat/awesome-readme)
-
-![GitHub](https://img.shields.io/github/license/navendu-pottekkat/awesome-readme)
 
 # Quick Start Demo
 
@@ -37,11 +29,9 @@ The web that shows the weather report .
 # Table of Contents
 
 This is a table of contents for your project. It helps the reader navigate through the README quickly.
-- [Project Title](#project-title)
-- [Quick Start Demo](#quick-start-demo)
+- [Weather Web](#project-title)
 - [Table of Contents](#table-of-contents)
 - [Installation](#installation)
-- [Usage](#usage)
 - [Development](#development)
 - [Contribute](#contribute)
 - [License](#license)
