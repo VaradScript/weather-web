@@ -22,16 +22,12 @@ The badges used here are explained below:
 : Shows the current release version.
 
 ![GitHub last commit](https://img.shields.io/github/last-commit/navendu-pottekkat/awesome-readme)
-: Shows the last commit time. Good indication of the project activity.
 
 ![GitHub issues](https://img.shields.io/github/issues-raw/navendu-pottekkat/awesome-readme)
-: Dynamic badge that shows the number of open issues in the project.
 
 ![GitHub pull requests](https://img.shields.io/github/issues-pr/navendu-pottekkat/awesome-readme)
-: Similar dynamic badge, but for pull requests.
 
 ![GitHub](https://img.shields.io/github/license/navendu-pottekkat/awesome-readme)
-: Shows the open source license the project uses.
 
 # Quick Start Demo
 
