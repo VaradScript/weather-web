@@ -67,6 +67,38 @@ Ensure you have the following installed:
    ```shell
    git clone https://github.com/VaradScript/weather-web.git
    cd weather-web
+   
+   Install dependencies:
+npm install
+
+Start the development server:
+npm start
+
+Setting Up the Development Environment
+Follow these steps if you'd like to contribute or make changes:
+
+Fork and Clone:
+Fork the repository and clone it to your local machine:
+git clone https://github.com/VaradScript/weather-web.git
+cd weather-web
+Contributing
+(Back to top)
+
+
+Contributions are welcome! Follow these steps to contribute:
+
+Open an Issue: Browse or create issues for improvements or bug fixes.
+Create a Branch:
+
+git checkout -b feature/your-feature-name
+Commit Changes:
+
+Write meaningful commit messages.
+Push to Your Fork:
+
+git push origin feature/your-feature-name
+Submit a Pull Request: Describe your changes and link relevant issues.
+
 
 [MIT license](./LICENSE)
 
