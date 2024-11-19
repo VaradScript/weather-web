@@ -39,28 +39,27 @@ This is a table of contents for your project. It helps the reader navigate throu
 
 
 # Weather Web Project  
-[(Back to top)](#table-of-contents)
+![Weather App](https://img.shields.io/badge/Project-Weather--Web-blue)
+[![Contributions Welcome](https://img.shields.io/badge/Contributions-Welcome-brightgreen)](#contributing)  
 
 An intuitive web application that fetches and displays real-time weather information for any location using reliable APIs.  
 
 ---
 
 ## Features  
-- Real-time weather updates.
-- Search weather by city name.
-- Responsive design for mobile and desktop.
+- 🌦️ Real-time weather updates.  
+- 🔍 Search weather by city name.  
+- 📱 Responsive design for mobile and desktop.  
 
 ---
 
 ## Installation  
 [(Back to top)](#table-of-contents)
 
-> **Note**: Use the "Back to top" links throughout the document for easy navigation.
-
 ### Prerequisites  
 Ensure you have the following installed:  
-- [Node.js](https://nodejs.org/)
-- A web browser (e.g., Chrome, Firefox)
+- [Node.js](https://nodejs.org/)  
+- A web browser (e.g., Chrome, Firefox)  
 
 ### Steps  
 
@@ -71,4 +70,5 @@ Ensure you have the following installed:
 
 [MIT license](./LICENSE)
 
+This project is licensed under the MIT License. You are free to use, modify, and distribute the code as per the license terms.
 
