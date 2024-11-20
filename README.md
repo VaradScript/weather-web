@@ -66,7 +66,6 @@ Ensure you have the following installed:
 1. Clone this repository:  
    ```shell
    git clone https://github.com/VaradScript/weather-web.git
-   cd weather-web
    
    Install dependencies:
 npm install
