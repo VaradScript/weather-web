@@ -67,12 +67,9 @@ Ensure you have the following installed:
    ```shell
    git clone https://github.com/VaradScript/weather-web.git
    
-   Install dependencies:
-npm install
-
+   
 Start the development server:
-npm start
-
+run in browser
 Setting Up the Development Environment
 Follow these steps if you'd like to contribute or make changes:
 
