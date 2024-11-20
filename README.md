@@ -95,8 +95,11 @@ Push to Your Fork:
 git push origin feature/your-feature-name
 Submit a Pull Request: Describe your changes and link relevant issues.
 
+## License
 
-[MIT license](./LICENSE)
+This project is licensed under the MIT License - see the [LICENSE](https://github.com/varadarajdganiga777/Facial-Expression-Through-AI/blob/main/LICENSE) file for details.
 
-This project is licensed under the MIT License. You are free to use, modify, and distribute the code as per the license terms.
+## Contributing
+
+We welcome contributions to Facexpreso! Please see the [Contributing Guidelines](CONTRIBUTING.md) for more information.
 
