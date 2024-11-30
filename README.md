@@ -92,7 +92,7 @@ Commit Changes:
 Write meaningful commit messages.
 Push to Your Fork:
 
-git push origin feature/your-feature-name
+
 Submit a Pull Request: Describe your changes and link relevant issues.
 
 ## License
