@@ -83,8 +83,6 @@ Contributing
 
 Contributions are welcome! Follow these steps to contribute:
 
-Open an Issue: Browse or create issues for improvements or bug fixes.
-Create a Branch:
 
 git checkout -b feature/your-feature-name
 Commit Changes:
