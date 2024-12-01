@@ -77,8 +77,7 @@ Fork and Clone:
 Fork the repository and clone it to your local machine:
 git clone https://github.com/VaradScript/weather-web.git
 cd weather-web
-Contributing
-(Back to top)
+
 
 
 Contributions are welcome! Follow these steps to contribute:
