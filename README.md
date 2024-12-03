@@ -75,7 +75,7 @@ Follow these steps if you'd like to contribute or make changes:
 
 Fork and Clone:
 Fork the repository and clone it to your local machine:
-git clone https://github.com/VaradScript/weather-web.git
+git clone https://github.com/VaradScript/weather-web.git<br>
 cd weather-web
 
 
@@ -90,7 +90,7 @@ Write meaningful commit messages.
 Push to Your Fork:
 
 
-Submit a Pull Request: Describe your changes and link relevant issues.
+Submit a Pull Request: Describe your changes and link relevant issues.<br>
 
 ## License
 
