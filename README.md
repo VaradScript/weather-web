@@ -87,7 +87,7 @@ git checkout -b feature/your-feature-name
 Commit Changes:
 
 Write meaningful commit messages.
-Push to Your Fork:
+Push to Your Fork.
 
 
 Submit a Pull Request: Describe your changes and link relevant issues.<br>
