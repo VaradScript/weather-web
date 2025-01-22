@@ -1,6 +1,4 @@
 
-![REadme](https://media.licdn.com/dms/image/v2/C5622AQEP4H_FBqxNdQ/feedshare-shrink_1280/feedshare-shrink_1280/0/1659317985338?e=1734566400&v=beta&t=KjHLxpvd6sQmNhEFmU5A-OVdUL4FVpjox_6s-JYGQjQ)
----The image is not accrute i update the code somehow is similar...
 # Weather Web
 
 
