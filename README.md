@@ -23,7 +23,7 @@ The badges used here are explained below:
 ![Demo Preview]
 
 The web that shows the weather report.
- https://varadscript.github.io/weather-web/
+ https://varadscript.github.io/weather-web
 
 # Table of Contents
 
