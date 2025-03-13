@@ -1,40 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Weather App</title>
+  <title>Weather App | VaradScript</title>
   <link rel="stylesheet" href="./style.css">
   <script src="./script.js" defer></script>
 </head>
-
 <body>
-  <div class="animated-background"></div> <!-- Background animation -->
-  <div class="container">
-    <div class="card">
+  <!-- Animated Background -->
+  <div class="animated-background"></div>
+
+  <!-- Main Container -->
+  <main class="container">
+    <!-- Weather Card -->
+    <section class="card" aria-labelledby="weather-title">
       <div class="search">
-        <input type="text" class="search-bar" placeholder="Search for a city...">
-        <button>Search</button>
+        <input 
+          type="text" 
+          class="search-bar" 
+          placeholder="Enter city name..." 
+          aria-label="Search for a city"
+          id="city-input"
+        >
+        <button type="button" aria-label="Search weather" id="search-btn">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+        </button>
       </div>
-      <div class="weather loading">
-        <h2 class="city">Weather in Delhi</h2>
-        <h1 class="temp">51°C</h1>
+      <div class="weather" id="current-weather">
+        <h1 class="city" id="weather-title">Weather in Delhi</h1>
+        <div class="temp">51°C</div>
         <div class="flex">
-          <img src="https://openweathermap.org/img/wn/04n.png" alt="" class="icon" />
-          <div class="description">Cloudy</div>
+          <img 
+            src="https://openweathermap.org/img/wn/04n.png" 
+            alt="Weather condition icon" 
+            class="icon" 
+            id="weather-icon"
+          />
+          <div class="description" id="weather-desc">Cloudy</div>
         </div>
         <div class="details">
-          <div class="humidity">Humidity: 60%</div>
-          <div class="wind">Wind speed: 6.2 km/h</div>
+          <p class="humidity" id="humidity">Humidity: 60%</p>
+          <p class="wind" id="wind">Wind speed: 6.2 km/h</p>
         </div>
       </div>
-    </div>
-    <div class="future-forecast">
-      <h3>7-Day Forecast</h3>
-      <div id="weather-forecast"></div>
-    </div>
-  </div>
-</body>
+    </section>
 
+    <!-- 7-Day Forecast -->
+    <section class="future-forecast" aria-labelledby="forecast-title">
+      <h2 id="forecast-title">7-Day Forecast</h2>
+      <div class="forecast-container" id="weather-forecast" aria-live="polite"></div>
+    </section>
+  </main>
+</body>
 </html>
