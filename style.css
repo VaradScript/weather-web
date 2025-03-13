@@ -165,3 +165,8 @@ button:hover {
   margin: 5px 0;
   font-size: 0.9em;
 }
+.weather.loading .temp,
+.weather.loading .description,
+.weather.loading .details {
+  opacity: 0; /* Hide content while loading */
+}
