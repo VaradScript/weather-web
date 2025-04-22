@@ -1,99 +1,97 @@
-const weather = {
+let weather = {
   apiKey: "8bc64561b230380e73c7048ff1d019e8",
-  
-  // Fetch current weather data
-  async fetchWeather(city) {
-    try {
-      const response = await fetch(
-        `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${this.apiKey}`
-      );
-      if (!response.ok) {
-        throw new Error("No weather found for this city.");
-      }
-      const data = await response.json();
-      this.displayWeather(data);
-    } catch (error) {
-      alert(error.message);
-      console.error("Weather fetch error:", error);
-    }
+  fetchWeather: function (city) {
+    fetch(
+      `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${this.apiKey}`
+    )
+      .then((response) => {
+        if (!response.ok) {
+          alert("No weather found.");
+          throw new Error("No weather found.");
+        }
+        return response.json();
+      })
+      .then((data) => this.displayWeather(data));
   },
-
-  // Fetch 5-day forecast data
-  async fetchForecast(city) {
-    try {
-      const response = await fetch(
-        `https://api.openweathermap.org/data/2.5/forecast?q=${city}&units=metric&appid=${this.apiKey}`
-      );
-      if (!response.ok) {
-        throw new Error("Forecast unavailable.");
-      }
-      const data = await response.json();
-      this.displayForecast(data);
-    } catch (error) {
-      console.error("Forecast fetch error:", error);
-    }
+  fetchForecast: function (city) {
+    fetch(
+      `https://api.openweathermap.org/data/2.5/forecast?q=${city}&units=metric&appid=${this.apiKey}`
+    )
+      .then((response) => response.json())
+      .then((data) => this.displayForecast(data));
   },
-
-  // Display current weather
-  displayWeather(data) {
+  displayWeather: function (data) {
     const { name } = data;
     const { icon, description } = data.weather[0];
     const { temp, humidity } = data.main;
     const { speed } = data.wind;
 
-    document.querySelector(".city").textContent = `Weather in ${name}`;
-    document.querySelector(".icon").src = `https://openweathermap.org/img/wn/${icon}.png`;
-    document.querySelector(".icon").alt = `${description} weather icon`; // Accessibility
-    document.querySelector(".description").textContent = description;
-    document.querySelector(".temp").textContent = `${temp.toFixed(1)}°C`;
-    document.querySelector(".humidity").textContent = `Humidity: ${humidity}%`;
-    document.querySelector(".wind").textContent = `Wind speed: ${speed} km/h`;
-    document.querySelector(".weather").classList.remove("loading");
+    document.querySelector(".city").innerText = "Weather in " + name;
+    document.querySelector(".icon").src =
+      "https://openweathermap.org/img/wn/" + icon + ".png";
+    document.querySelector(".description").innerText = description;
+    document.querySelector(".temp").innerText = temp + "°C";
+    document.querySelector(".humidity").innerText =
+      "Humidity: " + humidity + "%";
+    document.querySelector(".wind").innerText =
+      "Wind speed: " + speed + " km/h";
 
-    // Fetch forecast after current weather loads
     this.fetchForecast(name);
   },
-
-  // Display 5-day forecast
-  displayForecast(data) {
+  displayForecast: function (data) {
     const forecastContainer = document.getElementById("weather-forecast");
-    forecastContainer.innerHTML = ""; // Clear previous forecast
-
-    // Filter to one entry per day (every 8th item, ~24 hours)
-    const dailyForecasts = data.list.filter((_, index) => index % 8 === 0).slice(0, 5);
+    forecastContainer.innerHTML = "";
+    const dailyForecasts = data.list.filter((_, index) => index % 8 === 0); // Every 8th entry for daily forecast
 
     dailyForecasts.forEach((forecast) => {
       const { dt_txt } = forecast;
       const { icon } = forecast.weather[0];
       const { temp_min, temp_max } = forecast.main;
 
-      const forecastItem = document.createElement("div");
-      forecastItem.classList.add("forecast-item");
-      forecastItem.innerHTML = `
-        <p>${new Date(dt_txt).toLocaleDateString("en-US", { weekday: "short" })}</p>
-        <img src="https://openweathermap.org/img/wn/${icon}.png" alt="Weather icon" />
-        <p>Min: ${temp_min.toFixed(1)}°C</p>
-        <p>Max: ${temp_max.toFixed(1)}°C</p>
-      `;
-      forecastContainer.appendChild(forecastItem);
+      forecastContainer.innerHTML += `
+        <div class="forecast-item">
+          <div>${new Date(dt_txt).toLocaleDateString("en-US", {
+            weekday: "long",
+          })}</div>
+          <img src="https://openweathermap.org/img/wn/${icon}.png" />
+          <div>Min: ${temp_min.toFixed(1)}°C</div>
+          <div>Max: ${temp_max.toFixed(1)}°C</div>
+        </div>`;
     });
   },
-
-  // Handle search input
-  search() {
-    const city = document.querySelector(".search-bar").value.trim();
-    if (city) {
-      document.querySelector(".weather").classList.add("loading");
-      this.fetchWeather(city);
-    }
+  search: function () {
+    const city = document.querySelector(".search-bar").value;
+    this.fetchWeather(city);
   },
 };
 
-// Event Listeners
-document.querySelector(".search button").addEventListener("click", () => weather.search());
+document.querySelector(".search button").addEventListener("click", () => {
+  weather.search();
+});
+
 document.querySelector(".search-bar").addEventListener("keyup", (e) => {
   if (e.key === "Enter") weather.search();
 });
 
-// Initial load
+document.addEventListener('DOMContentLoaded', () => {
+    const searchInput = document.querySelector('.search-input');
+    const searchButton = document.querySelector('.search-button');
+
+    searchButton.addEventListener('click', () => {
+        const city = searchInput.value;
+        if (city) {
+            // Here you would typically make an API call to a weather service
+            // For now, we'll just log the city name
+            console.log(`Searching weather for ${city}`);
+        }
+    });
+
+    // Add enter key support for search
+    searchInput.addEventListener('keypress', (e) => {
+        if (e.key === 'Enter') {
+            searchButton.click();
+        }
+    });
+});
+
 weather.fetchWeather("Udupi");

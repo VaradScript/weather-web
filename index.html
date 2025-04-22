@@ -1,59 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Weather App | VaradScript</title>
-  <link rel="stylesheet" href="./style.css">
-  <script src="./script.js" defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-  <!-- Animated Background -->
-  <div class="animated-background"></div>
-
-  <!-- Main Container -->
-  <main class="container">
-    <!-- Weather Card -->
-    <section class="card" aria-labelledby="weather-title">
-      <div class="search">
-        <input 
-          type="text" 
-          class="search-bar" 
-          placeholder="Enter city name..." 
-          aria-label="Search for a city"
-          id="city-input"
-        >
-        <button type="button" aria-label="Search weather" id="search-btn">
-          <svg width="15" height="10" viewBox="0 0 23 23" fill="none" stroke="currentColor">
-            <circle cx="11" cy="11" r="8"></circle>
-            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-          </svg>
-        </button>
-      </div>
-      <div class="weather" id="current-weather">
-        <h1 class="city" id="weather-title">Weather in Delhi</h1>
-        <div class="temp">51°C</div>
-        <div class="flex">
-          <img 
-            src="https://openweathermap.org/img/wn/04n.png" 
-            alt="Weather condition icon" 
-            class="icon" 
-            id="weather-icon"
-          />
-          <div class="description" id="weather-desc">Cloudy</div>
+    <div class="container">
+        <div class="search-box">
+            <input type="text" placeholder="Enter city name" class="search-input">
+            <button class="search-button">
+                <i class="fas fa-search"></i>
+            </button>
         </div>
-        <div class="details">
-          <p class="humidity" id="humidity">Humidity: 60%</p>
-          <p class="wind" id="wind">Wind speed: 6.2 km/h</p>
-        </div>
-      </div>
-    </section>
 
-    <!-- 7-Day Forecast -->
-    <section class="future-forecast" aria-labelledby="forecast-title">
-      <h2 id="forecast-title">7-Day Forecast</h2>
-      <div class="forecast-container" id="weather-forecast" aria-live="polite"></div>
-    </section>
-  </main>
+        <div class="weather-container">
+            <div class="weather-info">
+                <div class="city-name">London</div>
+                <div class="temperature">22°C</div>
+                <div class="weather-description">Partly Cloudy</div>
+                <div class="weather-icon">
+                    <i class="fas fa-cloud-sun"></i>
+                </div>
+            </div>
+
+            <div class="additional-info">
+                <div class="info-item">
+                    <span class="info-label">Humidity</span>
+                    <span class="info-value">65%</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">Wind Speed</span>
+                    <span class="info-value">12 km/h</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">Pressure</span>
+                    <span class="info-value">1015 hPa</span>
+                </div>
+            </div>
+
+            <div class="forecast">
+                <div class="forecast-item">
+                    <div class="day">Mon</div>
+                    <i class="fas fa-sun"></i>
+                    <div class="temp">24°C</div>
+                </div>
+                <div class="forecast-item">
+                    <div class="day">Tue</div>
+                    <i class="fas fa-cloud"></i>
+                    <div class="temp">22°C</div>
+                </div>
+                <div class="forecast-item">
+                    <div class="day">Wed</div>
+                    <i class="fas fa-cloud-rain"></i>
+                    <div class="temp">20°C</div>
+                </div>
+                <div class="forecast-item">
+                    <div class="day">Thu</div>
+                    <i class="fas fa-cloud-sun"></i>
+                    <div class="temp">23°C</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>

@@ -1,6 +1,3 @@
-/* Import Open Sans from Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
-
 body {
   margin: 0;
   font-family: 'Open Sans', sans-serif;
@@ -9,7 +6,6 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #1e1e2f; /* Fallback color */
 }
 
 .animated-background {
@@ -19,25 +15,34 @@ body {
   width: 100%;
   height: 100%;
   z-index: -1;
-  animation: changeBackground 30s infinite ease-in-out;
+  animation: changeBackground 25s infinite ease-in-out;
   background-size: cover;
-  background-position: center;
-  opacity: 0.7; /* Slight transparency for overlay effect */
 }
 
 @keyframes changeBackground {
-  0%, 100% { background-image: url('1.jpg'); }
-  16.67% { background-image: url('2.jpg'); }
-  33.33% { background-image: url('3.jpg'); }
-  50% { background-image: url('4.jpg'); }
-  66.67% { background-image: url('5.jpg'); }
-  83.33% { background-image: url('6.jpg'); }
+  0%, 100% {
+    background-image: url('1.jpg');
+  }
+  25% {
+    background-image: url('2.jpg');
+  }
+  50% {
+    background-image: url('3.jpg');
+  }
+  75% {
+    background-image: url('4.jpg');
+  } 50% {
+    background-image: url('5.jpg');
+  }
+  75% {
+    background-image: url('6.jpg');
+  }
+
 }
 
 .container {
   max-width: 620px;
   width: 100%;
-  padding: 20px;
 }
 
 .card {
@@ -46,35 +51,23 @@ body {
   padding: 2em;
   border-radius: 20px;
   margin-bottom: 1em;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-  backdrop-filter: blur(5px); /* Glassmorphism effect */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .search {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  margin-bottom: 1.5em;
+  margin-bottom: 1em;
 }
 
 .search-bar {
   flex: 1;
-  padding: 0.8em 1em;
+  padding: 0.6em;
   border: none;
   border-radius: 20px;
   background: rgba(255, 255, 255, 0.2);
   color: white;
   font-size: 1em;
-  outline: none;
-  transition: background 0.3s;
-}
-
-.search-bar::placeholder {
-  color: rgba(255, 255, 255, 0.7);
-}
-
-.search-bar:focus {
-  background: rgba(255, 255, 255, 0.3);
 }
 
 button {
@@ -82,91 +75,30 @@ button {
   border-radius: 50%;
   background: rgba(255, 255, 255, 0.2);
   color: white;
-  padding: 0.8em;
+  padding: 0.6em;
   cursor: pointer;
-  transition: background 0.3s, transform 0.2s;
-  margin-left: 10px;
+  transition: 0.3s;
 }
 
 button:hover {
   background: rgba(255, 255, 255, 0.4);
-  transform: scale(1.1);
-}
-
-.temp {
-  font-size: 3.5em;
-  font-weight: 700;
-  margin: 0.5em 0;
-}
-
-.flex {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 15px;
-}
-
-.icon {
-  width: 60px;
-  height: 60px;
-}
-
-.description {
-  font-size: 1.5em;
-  text-transform: capitalize;
-}
-
-.details {
-  margin-top: 1.5em;
-  font-size: 1.1em;
-}
-
-.humidity, .wind {
-  margin: 0.5em 0;
 }
 
 .future-forecast {
   background: rgba(24, 24, 27, 0.8);
   padding: 20px;
   border-radius: 10px;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
   color: white;
-  backdrop-filter: blur(5px);
 }
 
-.future-forecast h2 {
-  margin-top: 0;
-  font-size: 1.5em;
-}
-
-.forecast-container {
+.future-forecast .forecast-item {
   display: flex;
+  align-items: last baseline;
   justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 10px;
-}
-
-.forecast-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  flex: 1;
-  min-width: 80px;
+  margin-bottom: 10px;
 }
 
 .forecast-item img {
   height: 40px;
-  margin: 5px 0;
-}
-
-.forecast-item p {
-  margin: 5px 0;
-  font-size: 0.9em;
-}
-.weather.loading .temp,
-.weather.loading .description,
-.weather.loading .details {
-  opacity: 0; /* Hide content while loading */
 }
